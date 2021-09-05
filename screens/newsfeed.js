@@ -38,9 +38,10 @@ const NewsFeedScreen = ({navigation}) =>{
       searchApi()
     }, [isFocused]);
 
-
+    //sort posts by the most recent
+    
     function compare(a, b) {
-      // Use toUpperCase() to ignore character casing
+      
       const dateA = date - a.time;
       const dateB = date - b.time;
 
