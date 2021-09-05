@@ -6,8 +6,8 @@ import posts from '../api/posts';
 import { useEffect,useState } from 'react';
 import AppLoading from 'expo-app-loading';
 import { Linking } from "react-native";
+import { useRef } from 'react';
 import { useIsFocused } from '@react-navigation/native';
-
 
 
 const NewsFeedScreen = ({navigation}) =>{
@@ -15,17 +15,17 @@ const NewsFeedScreen = ({navigation}) =>{
   
   var today = new Date();
   const date = today.getDate();
-  const isFocused = useIsFocused();
 
     const [results, setResults] = useState([]);
     const [refreshing, setRefreshing] = useState(false);
-    
+    const isMounted = useRef(true);
 
     const searchApi = async () => {
       //console.log('Hi there!');
       try {
         const response = await posts.get('');
         
+        if(isMounted)
         setResults(response.data)
 
       } catch (err) {
@@ -36,8 +36,11 @@ const NewsFeedScreen = ({navigation}) =>{
     };
   
     useEffect( () => {
+      if(isMounted)
       searchApi()
-    }, [isFocused]);
+
+      return(() => {isMounted.current = false})
+    }, []);
 
     
   const onRefresh = () => {
