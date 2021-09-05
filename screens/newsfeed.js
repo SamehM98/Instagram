@@ -18,14 +18,12 @@ const NewsFeedScreen = ({navigation}) =>{
 
     const [results, setResults] = useState([]);
     const [refreshing, setRefreshing] = useState(false);
-    const isMounted = useRef(true);
 
     const searchApi = async () => {
       //console.log('Hi there!');
       try {
         const response = await posts.get('');
         
-        if(isMounted)
         setResults(response.data)
 
       } catch (err) {
@@ -36,10 +34,7 @@ const NewsFeedScreen = ({navigation}) =>{
     };
   
     useEffect( () => {
-      if(isMounted)
       searchApi()
-
-      return(() => {isMounted.current = false})
     }, []);
 
     
