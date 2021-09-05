@@ -28,7 +28,8 @@ const AddPostScreen = () =>{
     const [selectedPhoto, setSelectedPhoto] = useState("https://images.unsplash.com/photo-1570026517541-258404ea3bfc?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHlyYW1pZHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80");
     const [results, setResults] = useState([]);
     const [selectedValue, setSelectedValue] = useState("Cairo");
-    const current_user = (useSelector(selectUser));
+    const current_user_data = (useSelector(selectUser));
+    const current_user = current_user_data.id;
     const navigation = useNavigation();
 
     var today = new Date();

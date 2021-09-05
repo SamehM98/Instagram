@@ -29,7 +29,8 @@ const BucketlistScreen = () => {
 
 
     const [text, setText] =  useState('');
-    const current_user = (useSelector(selectUser));
+    const current_user_data = (useSelector(selectUser));
+    const current_user = current_user_data.id;
     const [blist , setBlist] = useState([]);
     const isFocused = useIsFocused();
 

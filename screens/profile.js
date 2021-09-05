@@ -34,7 +34,7 @@ import {
 const ProfileScreen = () => {
 
     const current_user = (useSelector(selectUser));
-    const [user, setUser] = useState(null);
+    const [user, setUser] = useState(current_user);
     
 
     
@@ -60,9 +60,9 @@ const ProfileScreen = () => {
         
       };
     
-      useEffect( () => {
+ /*     useEffect( () => {
         searchApi(current_user)
-      }, []);
+      }, []); */
 
   //  console.log(current_user);
 
@@ -83,7 +83,7 @@ const ProfileScreen = () => {
       });
 
 
-      if (!fontsLoaded || !user) {
+      if (!fontsLoaded) {
         return <AppLoading />;
       }  
 

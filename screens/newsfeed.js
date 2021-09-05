@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View , FlatList, Touchable, TouchableOpacity} from 'react-native';
+import { StyleSheet, Text, View , FlatList, Touchable, TouchableOpacity , RefreshControl} from 'react-native';
 import Post from '../components/post';
 import Bar from '../components/bar';
 import posts from '../api/posts';
@@ -18,6 +18,7 @@ const NewsFeedScreen = ({navigation}) =>{
   const isFocused = useIsFocused();
 
     const [results, setResults] = useState([]);
+    const [refreshing, setRefreshing] = useState(false);
     
 
     const searchApi = async () => {
@@ -37,6 +38,12 @@ const NewsFeedScreen = ({navigation}) =>{
     useEffect( () => {
       searchApi()
     }, [isFocused]);
+
+    
+  const onRefresh = () => {
+    setRefreshing(true);
+    searchApi().then(() => setRefreshing(false));
+  }
 
     //sort posts by the most recent
     
@@ -80,7 +87,13 @@ const NewsFeedScreen = ({navigation}) =>{
         renderItem = {({item}) => {
           return <Post item={item}/>
         }}
-        
+
+        refreshControl={
+          <RefreshControl
+            refreshing={refreshing}
+            onRefresh={onRefresh}
+          />
+        }
         />
     
         <Bar />

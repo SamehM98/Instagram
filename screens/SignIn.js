@@ -38,7 +38,7 @@ const SignIn = () =>{
           {
             if(response.data[0].password == pwd)
             {
-                dispatch(signin(response.data[0].id))
+                dispatch(signin(response.data[0]))
                 navigation.navigate('Newsfeed');
             }
             
