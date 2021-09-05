@@ -1,0 +1,80 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "likes": "25",
+      "image": "https://cdn.picturesandwordsblog.com/wp-content/uploads/2018/06/04184251/40337940710_4a24a4b6a3_o-1080x700.jpg",
+      "time": "1d",
+      "author": "2"
+    },
+    {
+      "id": 2,
+      "likes": "19782",
+      "image": "https://localtuktuk.com/wp-content/uploads/2019/08/santiago-bernab%C3%A9u-stadium-1040x530.jpg",
+      "time": "4d",
+      "author": "2"
+    },
+    {
+      "id": 3,
+      "likes": "18",
+      "image": "https://wallpaperaccess.com/full/359978.jpg",
+      "time": "5d",
+      "author": "3"
+    }
+  ],
+  "photos": [
+    {
+      "id": 1,
+      "image": "https://images.unsplash.com/photo-1570026517541-258404ea3bfc?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHlyYW1pZHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80"
+    },
+    {
+      "id": 2,
+      "image": "https://www.osiristours.com/wp-content/uploads/2016/06/Alexandria-9-e1488051126787.jpg"
+    },
+    {
+      "id": 3,
+      "image": "https://khufuegypttours.com/wp-content/uploads/2020/04/Luxor-Egypt.jpg"
+    },
+    {
+      "id": 4,
+      "image": "https://cdn.cnn.com/cnnnext/dam/assets/200611101955-01-egypt-dahab-full-169.jpg"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "image": "https://static.photocdn.pt/images/articles/2019/08/07/images/articles/2019/07/31/linkedin_profile_picture_tips-1.jpg",
+      "age": 27,
+      "name": "Andrew Stones",
+      "email": "andrew@gmail.com"
+    },
+    {
+      "id": 2,
+      "image": "https://img.a.transfermarkt.technology/portrait/big/27992-1543926073.jpg",
+      "age": 33,
+      "name": "Luka Modric",
+      "email": "modric@gmail.com"
+    },
+    {
+      "id": 3,
+      "image": "https://upload.wikimedia.org/wikipedia/en/a/a1/NafSadh_Profile.jpg",
+      "age": 24,
+      "name": "Ahmed Khan",
+      "email": "khan@gmail.com"
+    },
+    {
+      "id": 4,
+      "image": "https://media-exp1.licdn.com/dms/image/C5603AQEErhSfCnQ08g/profile-displayphoto-shrink_800_800/0/1621443728082?e=1635984000&v=beta&t=RPiMZoGZ1xiwcqCRv1VAYWtapcK0E_QoYD1wI3QVCU8",
+      "age": 23,
+      "name": "Sameh Mohamed",
+      "email": "sameh@gmail.com"
+    },
+    {
+      "id": 5,
+      "image": "https://media-exp1.licdn.com/dms/image/C5603AQEErhSfCnQ08g/profile-displayphoto-shrink_800_800/0/1621443728082?e=1635984000&v=beta&t=RPiMZoGZ1xiwcqCRv1VAYWtapcK0E_QoYD1wI3QVCU8",
+      "age": 23,
+      "name": "Dummy data",
+      "email": "sameh@gmail.com"
+    }
+  ]
+}
