@@ -12,11 +12,13 @@ import { useIsFocused } from '@react-navigation/native';
 
 const NewsFeedScreen = ({navigation}) =>{
 
+  
   var today = new Date();
   const date = today.getDate();
   const isFocused = useIsFocused();
 
     const [results, setResults] = useState([]);
+    
 
     const searchApi = async () => {
       //console.log('Hi there!');

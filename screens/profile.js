@@ -35,6 +35,7 @@ const ProfileScreen = () => {
 
     const current_user = (useSelector(selectUser));
     const [user, setUser] = useState(null);
+    
 
     
     const searchApi = async (id) => {
