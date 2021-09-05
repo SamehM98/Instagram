@@ -41,7 +41,7 @@ const BucketlistScreen = () => {
         let existingArr = JSON.parse(existing);
 
         
-        if(!existingArr)
+        if(!existingArr) //if null , make empty array
         {
             existingArr = [];
             

@@ -32,7 +32,8 @@ const Post = ({item}) =>{
     const date = today.getDate();
 
 
-
+    //get the data of the post's author
+    
     const searchApi = async (id) => {
         //console.log('Hi there!');
         try {

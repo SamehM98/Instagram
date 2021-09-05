@@ -30,7 +30,6 @@ const AddPostScreen = () =>{
     const [selectedValue, setSelectedValue] = useState("Cairo");
     const current_user = (useSelector(selectUser));
     const navigation = useNavigation();
-    const [loading, setLoading] = useState(true)
 
     var today = new Date();
 
@@ -54,9 +53,7 @@ const AddPostScreen = () =>{
       };
     
       useEffect( () => {
-        searchApi().then(() => {
-            setLoading(false);
-          })
+        searchApi();
       }, []);
 
 
@@ -102,11 +99,6 @@ const AddPostScreen = () =>{
             console.log('Something went wrong');
           }
     };    
-
-
-
-    if(loading)
-    return <AppLoading />;
 
 
       return (<View style={styles.container}>
