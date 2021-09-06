@@ -25,7 +25,7 @@ const Photo = ({item , selected}) =>{
 
 const AddPostScreen = () =>{
     const [selectedItem, setSelectedItem] = useState(1);
-    const [selectedPhoto, setSelectedPhoto] = useState("https://images.unsplash.com/photo-1570026517541-258404ea3bfc?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHlyYW1pZHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80");
+    const [selectedPhoto, setSelectedPhoto] = useState("");
     const [results, setResults] = useState([]);
     const [selectedValue, setSelectedValue] = useState("Cairo");
     const current_user_data = (useSelector(selectUser));
@@ -44,6 +44,7 @@ const AddPostScreen = () =>{
           const response = await photos.get('');
           
           setResults(response.data)
+          setSelectedPhoto(response.data[0].image)
    //       console.log(response.data)
   
         } catch (err) {
@@ -89,7 +90,7 @@ const AddPostScreen = () =>{
 
             })
 
-            console.log(response.data.id);
+     //       console.log(response.data.id);
             if(response)
             {
                 Remove(selectedValue);
