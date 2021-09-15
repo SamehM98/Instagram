@@ -25,3 +25,9 @@ When proceeding to the news feed, the new post is shown.
 In addition, if the location is on the user's bucketlist; it is removed immediately.
 
 ![n7jh789h](https://user-images.githubusercontent.com/66166781/133436936-33cfd10a-df9a-4356-9708-f401604c5206.jpg)
+
+Data for users and static photos.
+https://my-json-server.typicode.com/SamehM98/jsonweb/
+
+Data for posts.
+https://retoolapi.dev/RhD8HI/datainsta/
